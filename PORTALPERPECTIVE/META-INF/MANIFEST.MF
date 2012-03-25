@@ -1,0 +1,37 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Portalperstest Plug-in
+Bundle-SymbolicName: nc.uap.lfw.tools.portalperspective;singleton:=true
+Bundle-Version: 6.0
+Bundle-Activator: nc.uap.portal.perspective.PortalPlugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.jface.text,
+ org.eclipse.ui.workbench.texteditor,
+ org.eclipse.ui.views,
+ org.eclipse.core.resources,
+ org.eclipse.debug.core,
+ org.eclipse.ui.ide,
+ org.eclipse.core.runtime,
+ org.eclipse.jdt.core,
+ org.eclipse.jdt.ui,
+ org.eclipse.debug.ui,
+ org.eclipse.jdt.debug,
+ org.eclipse.jdt.launching,
+ org.eclipse.core.variables,
+ org.eclipse.core.filesystem,
+ org.eclipse.ui.console,
+ org.eclipse.ui.navigator,
+ org.eclipse.jdt.junit,
+ org.eclipse.gef;bundle-version="3.4.1",
+ org.eclipse.ui.editors;bundle-version="3.4.0",
+ nc.uap.lfw.tools.perspective;bundle-version="1.0.8",
+ nc.uap.lfw.tools.common;bundle-version="1.0.8"
+Bundle-ClassPath: .,
+ lib/freemarker-2.3.6.jar,
+ lib/modelvo.jar,
+ lib/portalom.jar,
+ lib/portalservice.jar,
+ lib/portalvo.jar,
+ lib/portlet-api_2.0_spec-1.0.jar
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: UFIDA Software CO.LTD

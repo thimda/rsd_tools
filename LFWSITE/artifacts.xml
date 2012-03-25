@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository class='org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository' version='1.0.0'?>
+<repository name='file:/D:/views/views61/NC_UAP_WEB6.1_dev/NC6_UAP_VOB/NC_UAP_WEB/lfwtools/LFWSITE/ - artifacts' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.compressed' value='false'/>
+    <property name='p2.timestamp' value='1332642100373'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='5'>
+    <artifact classifier='osgi.bundle' id='nc.uap.lfw.tools.xmli18n' version='6.1.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='660365'/>
+        <property name='download.size' value='660365'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='LFWFEATURE' version='6.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='746'/>
+        <property name='download.size' value='746'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='nc.uap.lfw.tools.project' version='6.1.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='92113'/>
+        <property name='download.size' value='92113'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='nc.uap.lfw.tools.common' version='6.1.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='41712'/>
+        <property name='download.size' value='41712'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='nc.uap.lfw.tools.perspective' version='6.1.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='16181883'/>
+        <property name='download.size' value='16181883'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>

@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <!--视图扩展点-->
+    <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="nc.uap.lfw.perspective.PerspectiveFactory"
+            icon="icons/perspective.ico"
+            id="nc.uap.lfw.perspective.PerspectiveFactory"
+            name="LFW模型视图"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension targetID="nc.uap.lfw.perspective.PerspectiveFactory">
+         <perspectiveShortcut id="org.eclipse.debug.ui.DebugPerspective"/>
+          <perspectiveShortcut id="org.eclipse.ui.resourcePerspective"/>
+      </perspectiveExtension>
+      <perspectiveExtension targetID="org.eclipse.ui.resourcePerspective">
+         <perspectiveShortcut id="nc.uap.lfw.perspective.PerspectiveFactory"/>
+      </perspectiveExtension>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.views">
+     <category
+        id="lfw.views.category"
+        name="LFW浏览器"/>
+      <view
+            category="lfw.views.category"
+            class="nc.uap.lfw.perspective.project.LFWExplorerTreeView"
+            id="nc.uap.lfw.perspective.project.LFWExplorerTreeView"
+            icon="icons/projectview.gif"
+            name="LFW项目浏览器"/>
+      <view
+            category="lfw.views.category"
+            class="nc.uap.lfw.perspective.LFWViewSheet"
+            id="nc.uap.lfw.perspective.LFWViewSheet"
+            name="模型视图"/>
+   </extension>
+   
+   <!--编辑器扩展点-->
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.perspective.editor.DataSetEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.perspective.editor.DataSetEditor"
+            name="数据集 编辑器"/>
+   </extension>
+   
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.chart.core.ChartEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.chart.core.ChartEditor"
+            name="图表 编辑器"/>
+   </extension>
+    
+	  <extension
+	     point="org.eclipse.ui.editors">
+	  <editor
+	        class="nc.uap.lfw.cardlayout.CardLayoutEditor"
+	        contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+	        default="true"
+	        icon="icons/editor.gif"
+	        id="nc.uap.lfw.cardlayout.CardLayoutEditor"
+	        name="card布局编辑器"/>
+   </extension>
+   
+   
+    <extension
+	     point="org.eclipse.ui.editors">
+	  <editor
+	        class="nc.uap.lfw.selfdefcomp.core.SelfDefCompEditor"
+	        contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+	        default="true"
+	        icon="icons/editor.gif"
+	        id="nc.uap.lfw.selfdefcomp.core.SelfDefCompEditor"
+	        name="自定义控件编辑器"/>
+   </extension>
+   
+   
+    <extension
+	     point="org.eclipse.ui.editors">
+	  <editor
+	        class="nc.uap.lfw.panellayout.PanelEditor"
+	        contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+	        default="true"
+	        icon="icons/editor.gif"
+	        id="nc.uap.lfw.panellayout.PanelEditor"
+	        name="panel布局编辑器"/>
+   </extension>
+   
+    <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.lfw.editor.contextmenubar.ContextMenuEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.lfw.editor.contextmenubar.ContextMenuEditor"
+            name="右键菜单编辑器"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.linkcomp.LinkCompEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.linkcomp.LinkCompEditor"
+            name="链接 编辑器"/>
+   </extension>
+   
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.progressbar.ProgressBarEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.progressbar.ProgressBarEditor"
+            name="进度条编辑器"/>
+   </extension>
+     
+    <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.imagebutton.ImageButtonEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.imagebutton.ImageButtonEditor"
+            name="图形按钮编辑器"/>
+   </extension>
+     
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.refnoderel.RefnoderelEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.refnoderel.RefnoderelEditor"
+            name="参照关系 编辑器"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.tab.TabEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.tab.TabEditor"
+            name="Tab页签 编辑器"/>
+   </extension>
+   
+   
+    <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.outlookbar.OutLookbarEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.outlookbar.OutLookbarEditor"
+            name="OutLookbar 编辑器"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.label.LabelEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.label.LabelEditor"
+            name="标签 编辑器"/>
+   </extension>
+   
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.image.ImageEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.image.ImageEditor"
+            name="图片编辑器"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.iframe.IFrameEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.iframe.IFrameEditor"
+            name="IFrame 编辑器"/>
+   </extension>
+  
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.toolbar.ToolBarEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.toolbar.ToolBarEditor"
+            name="工具条 编辑器"/>
+   </extension>
+   
+   
+    <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.textcomp.TextCompEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.textcomp.TextCompEditor"
+            name="文本框 编辑器"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.button.ButtonEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.button.ButtonEditor"
+            name="按钮 编辑器"/>
+   </extension>
+   
+   
+    <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.refnode.core.RefNodeEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.refnode.core.RefNodeEditor"
+            name="参照 编辑器"/>
+   </extension>
+   
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.lfw.editor.datasets.core.DatasetsEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.lfw.editor.datasets.core.DatasetsEditor"
+            name="数据集关系编辑器"/>
+   </extension>
+   
+    <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.combodata.core.ComboDataEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.combodata.core.ComboDataEditor"
+            name="下拉数据编辑器"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.grid.core.GridEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.grid.core.GridEditor"
+            name="表格编辑器"/>
+   </extension>
+   
+   
+    <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.excel.core.ExcelEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.excel.core.ExcelEditor"
+            name="Excel编辑器"/>
+   </extension>
+   
+    <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.form.core.FormEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.form.core.FormEditor"
+            name="表单编辑器"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.tree.core.TreeEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.tree.core.TreeEditor"
+            name="树编辑器"/>
+   </extension>
+   
+ 
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.lfw.editor.pageflow.PageFlowEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.lfw.editor.pageflow.PageFlowEditor"
+            name="PageFlow 编辑器"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.lfw.editor.pagemeta.PagemetaEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.lfw.editor.pagemeta.PagemetaEditor"
+            name="Pagemeta 编辑器"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.lfw.editor.widget.WidgetEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.lfw.editor.widget.WidgetEditor"
+            name="片段编辑器"/>
+   </extension>
+   
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.lfw.jsp.editor.GuideEditor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.lfw.jsp.editor.GuideEditor"
+            name="UI设计"/>
+   </extension>
+ 
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.lfw.editor.menubar.MenubarEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="false"
+            icon="icons/editor.gif"
+            id="nc.lfw.editor.menubar.MenubarEditor"
+            name="菜单编辑器">
+      </editor>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.editor.application.ApplicationEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.editor.application.ApplicationEditor"
+            name="Application 编辑器"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.editor.window.WindowBrowserEditor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.editor.window.WindowBrowserEditor"
+            name="Window Web 编辑器"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.editor.view.ViewBrowserEditor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.editor.view.ViewBrowserEditor"
+            name="View Web 编辑器"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.lfw.editor.publicview.PublicViewBrowserEditor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.lfw.editor.publicview.PublicViewBrowserEditor"
+            name="PublicView Web 编辑器"/>
+   </extension>
+   
+   
+   <!--====================================================-->
+   <!-- Project Plugin -->
+   <!--====================================================-->
+     
+   
+  
+</plugin>

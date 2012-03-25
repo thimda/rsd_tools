@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Lfw project guide plug in
+Bundle-SymbolicName: nc.uap.lfw.tools.project;singleton:=true
+Bundle-Version: 6.1
+Bundle-Activator: nc.uap.lfw.core.WEBProjPlugin
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.resources,
+ org.eclipse.jdt.core,
+ org.eclipse.jdt.launching,
+ org.eclipse.jdt.debug.ui,
+ org.eclipse.debug.core,
+ org.eclipse.ui.ide,
+ org.eclipse.debug.ui,
+ org.eclipse.jdt.ui,
+ org.eclipse.core.variables,
+ org.eclipse.core.filesystem,
+ org.eclipse.ui.console,
+ org.eclipse.search,
+ org.eclipse.ui.navigator,
+ org.eclipse.ui,
+ org.eclipse.core.runtime;bundle-version="3.4.0",
+ nc.uap.lfw.tools.common;bundle-version="1.0.8"
+Eclipse-LazyStart: true
+Bundle-ActivationPolicy: lazy
+Export-Package: nc.uap.lfw.core,
+ nc.uap.lfw.internal.core,
+ nc.uap.lfw.internal.project,
+ nc.uap.lfw.internal.util,
+ nc.uap.lfw.launcher,
+ nc.uap.lfw.model,
+ nc.uap.lfw.project,
+ nc.uap.lfw.ui.action,
+ nc.uap.lfw.wizards
+Bundle-Vendor: UFIDA Software CO.LTD
+Bundle-ClassPath: .

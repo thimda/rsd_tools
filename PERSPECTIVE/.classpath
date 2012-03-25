@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/design"/>
+	<classpathentry kind="src" path="src/amc"/>
+	<classpathentry kind="src" path="src/uiguid"/>
+	<classpathentry kind="src" path="src/main"/>
+	<classpathentry kind="src" path="src/ncstarter"/>
+	<classpathentry kind="src" path="src/datasets"/>
+	<classpathentry kind="src" path="src/menubar"/>
+	<classpathentry kind="src" path="src/core"/>
+	<classpathentry kind="src" path="src/listener"/>
+	<classpathentry kind="src" path="src/component"/>
+	<classpathentry kind="src" path="src/tmp"/>
+	<classpathentry exported="true" kind="lib" path="bin/"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/amccore.jar"/>
+	<classpathentry kind="lib" path="lib/nccore.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

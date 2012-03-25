@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="PORTALFEATURE"
+      label="PORTALFEATURE Feature"
+      version="6.1"
+      provider-name="UFIDA">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <plugin
+         id="nc.uap.lfw.tools.portalperspective"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="nc.uap.lfw.tools.portalproject"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+</feature>

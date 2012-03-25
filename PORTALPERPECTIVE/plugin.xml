@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <!--视图扩展点-->
+    <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="nc.uap.portal.perspective.PortalPerspectiveFactory"
+            icon="icons/perspective.ico"
+            id="nc.uap.portal.perspective.PortalPerspectiveFactory"
+            name="Portal模型视图"/>
+   </extension>
+  
+    <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension targetID="nc.uap.portal.perspective.PortalPerspectiveFactory">
+         <perspectiveShortcut id="org.eclipse.debug.ui.DebugPerspective"/>
+          <perspectiveShortcut id="org.eclipse.ui.resourcePerspective"/>
+      </perspectiveExtension>
+      <perspectiveExtension targetID="org.eclipse.ui.resourcePerspective">
+         <perspectiveShortcut id="nc.uap.portal.perspective.PortalPerspectiveFactory"/>
+      </perspectiveExtension>
+   </extension>
+   
+   
+    <extension
+         point="org.eclipse.ui.views">
+     <category
+        id="lfw.views.category"
+        name="Portal浏览器"/>
+      <view
+            category="lfw.views.category"
+            class="nc.uap.portal.perspective.PortalExplorerTreeView"
+            id="nc.uap.portal.perspective.PortalExplorerTreeView"
+            icon="icons/projectview.gif"
+            name="Portal浏览器"/>
+    </extension>
+    
+    <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.portal.page.PortalPageEditor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.portal.page.PortalPageEditor"
+            name="page 编辑器"/>
+   </extension>
+ 
+    <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.portal.portalmodule.PortalModuleEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.portal.portalmodule.PortalModuleEditor"
+            name="portal  编辑器"/>
+   </extension>
+
+    <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.portal.managerapps.ManagerAppsEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.portal.managerapps.ManagerAppsEditor"
+            name="功能  编辑器"/>
+   </extension>
+ 
+    <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.portal.theme.ThemeEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.portal.theme.ThemeEditor"
+            name="主题  编辑器"/>
+   </extension>
+ 
+    <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.portal.skin.SkinEditor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.portal.skin.SkinEditor"
+            name="样式 编辑器"/>
+   </extension>
+ 
+    <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.portal.portlets.PortletEditor"
+            contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.portal.portlets.PortletEditor"
+            name="Portlet 编辑器"/>
+   </extension>
+ 
+ 
+ <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="nc.uap.portal.core.PortalEditor"
+            default="true"
+            icon="icons/editor.gif"
+            id="nc.uap.portal.core.PortalEditor"
+            name="Portal 编辑器"/>
+   </extension>
+ <extension
+       point="org.eclipse.ui.editors">
+    <editor
+          class="nc.uap.portal.events.EventsEditor"
+          contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+          default="true"
+          icon="icons/editor.gif"
+          id="nc.uap.portal.events.EventsEditor"
+          name="事件 编辑器">
+    </editor>
+ </extension>
+ <extension
+       point="org.eclipse.ui.editors">
+    <editor
+          class="nc.uap.portal.plugin.PluginEditor"
+          contributorClass="nc.uap.lfw.perspective.editor.LFWeditorActionBarContributor"
+          default="true"
+          icon="icons/editor.gif"
+          id="nc.uap.portal.plugin.PluginEditor"
+          name="插件 编辑器">
+    </editor>
+ </extension>
+ <!--
+ <extension
+       point="org.eclipse.ui.editors">
+    <editor
+          class="nc.uap.portal.category.CategoryEditor"
+          default="true"
+          icon="icons/editor.gif"
+          id="nc.uap.portal.category.CategoryEditor"
+          name="portlet分类 编辑器">
+    </editor>
+ </extension>
+ <extension
+       point="org.eclipse.ui.editors">
+    <editor
+          class="nc.uap.portal.webconfig.WebConfigEditor"
+          default="true"
+          icon="icons/editor.gif"
+          id="nc.uap.portal.webconfig.WebConfigEditor"
+          name="web配置编辑器">
+    </editor>
+ </extension>
+-->
+</plugin>

@@ -1,0 +1,255 @@
+package nc.lfw.editor.pagemeta;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+
+import nc.lfw.design.view.LFWConnector;
+import nc.lfw.editor.common.tools.LFWPersTool;
+import nc.lfw.lfwtools.perspective.MainPlugin;
+import nc.uap.lfw.core.WEBProjConstants;
+import nc.uap.lfw.core.WEBProjPlugin;
+import nc.uap.lfw.core.common.WebConstant;
+import nc.uap.lfw.core.comp.FormComp;
+import nc.uap.lfw.core.comp.GridComp;
+import nc.uap.lfw.core.comp.WebComponent;
+import nc.uap.lfw.core.data.Dataset;
+import nc.uap.lfw.core.page.LfwWidget;
+import nc.uap.lfw.core.page.PageMeta;
+import nc.uap.lfw.core.refnode.IRefNode;
+import nc.uap.lfw.core.refnode.NCRefNode;
+import nc.uap.lfw.editor.common.tools.LFWTool;
+import nc.uap.lfw.perspective.project.LFWExplorerTreeView;
+import nc.uap.lfw.perspective.webcomponent.LFWBusinessCompnentTreeItem;
+import nc.uap.lfw.perspective.webcomponent.LFWDirtoryTreeItem;
+import nc.uap.lfw.perspective.webcomponent.LFWVirtualDirTreeItem;
+import nc.uap.lfw.window.RefreshWindowNodeAction;
+
+import org.eclipse.core.resources.IProject;
+import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.widgets.TreeItem;
+
+public class LFWPageMetaTreeItem extends LFWDirtoryTreeItem {
+
+	private PageMeta pm = null;
+	private static String BASE_PATH = "\\web\\html\\nodes\\";
+//	private PageMetaConfig parentPm = null;
+//	
+//	public void setParentPm(PageMetaConfig parentPm) {
+//		this.parentPm = parentPm;
+//	}
+
+
+	private ImageDescriptor imageDescriptor = null;
+	public LFWPageMetaTreeItem(TreeItem parentItem, Object object, String text) {
+		super(parentItem, object, text);
+	}
+	
+	protected Image getDirImage() {
+		imageDescriptor = WEBProjPlugin.loadImage(
+					WEBProjPlugin.ICONS_PATH, "page.gif");
+		return imageDescriptor.createImage();
+	}
+
+
+	public PageMeta getPm() {
+		if(pm == null){
+			String projectPath = LFWPersTool.getProjectPath();
+			
+			IProject project = LFWPersTool.getCurrentProject();
+			//如果是bcp工程,project路径需要加组件名称
+			if(LFWPersTool.isBCPProject(project)){
+				LFWBusinessCompnentTreeItem busiCompnent = LFWPersTool.getCurrentBusiCompTreeItem();
+				projectPath += "/" + busiCompnent.getText().substring(busiCompnent.getText().indexOf(WEBProjConstants.BUSINESSCOMPONENT) + 
+						WEBProjConstants.BUSINESSCOMPONENT.length() + 1, busiCompnent.getText().length() -1 );
+			}
+			// 获取当前Pagemeta
+			Map<String, Object> paramMap = new HashMap<String, Object>();
+			paramMap.put(WebConstant.PROJECT_PATH_KEY, projectPath);
+			String pageIdKey = LFWPersTool.getCurrentFolderPath(this).substring(LFWPersTool.getCurrentFolderPath(this).lastIndexOf(BASE_PATH) + 16);
+			paramMap.put(WebConstant.PAGE_ID_KEY, pageIdKey);
+			paramMap.put(WebConstant.PARENT_PAGE_ID_KEY, getParentPm());
+			
+			Map<String, String> userInfoMap = LFWPersTool.getUserInfoMap();
+			try {
+				pm = LFWConnector.getPageMeta(paramMap, userInfoMap);
+			} catch (Exception e) {
+				MainPlugin.getDefault().logError(e.getMessage(), e);
+				MessageDialog.openError(null, "错误提示", e.getMessage());
+			}
+//			if(pm == null){
+//				pm = new PageMetaConfig();
+//				pm.setId("NULL");
+//			}
+		}
+		if(pm != null){
+			LfwWidget[] widgets = pm.getWidgets();
+			for (int i = 0; i < widgets.length; i++) {
+				LfwWidget widget = widgets[i];
+				Dataset[] dss = widget.getViewModels().getDatasets();
+				IRefNode[] refnodes = widget.getViewModels().getRefNodes();
+				WebComponent[] grids = widget.getViewComponents().getComponentByType(GridComp.class);
+				WebComponent[] forms = widget.getViewComponents().getComponentByType(FormComp.class);
+				if(dss != null){
+					for (int j = 0; j < dss.length; j++) {
+						Dataset ds = dss[j];
+						String dsCaption = ds.getCaption();
+						if(dsCaption != null && !"".equals(dsCaption)){
+							if(refnodes != null){
+								for (int k = 0; k < refnodes.length; k++) {
+									IRefNode refnode = refnodes[k];
+									if(refnode instanceof NCRefNode && refnode.getId().indexOf(ds.getId()) != -1){
+										NCRefNode ncRefNode = (NCRefNode) refnode;
+										if(ncRefNode.getText() != null && !"".equals(ncRefNode.getText()))
+											continue;
+										else
+											ncRefNode.setText(dsCaption + "_" + ncRefNode.getRefcode());
+										}
+								}
+							}
+							if(forms != null){
+								for (int k = 0; k < forms.length; k++) {
+									FormComp form = (FormComp) forms[k];
+									if(form.getDataset() != null && form.getDataset().equals(ds.getId())){
+										if(form.getCaption() != null && !"".equals(form.getCaption()))
+											continue;
+										else
+											form.setCaption(dsCaption);
+									}
+								}
+							}
+							if(grids != null){
+								for (int k = 0; k < grids.length; k++) {
+									GridComp grid = (GridComp) grids[k];
+									if(grid.getDataset() != null && grid.getDataset().equals(ds.getId())){
+										if(grid.getCaption() != null && !"".equals(grid.getCaption()))
+											continue;
+										else
+											grid.setCaption(dsCaption);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		return pm;
+	}
+	
+//	
+//	public PageMetaConfig getParentPm(LFWPageMetaTreeItem treeItem){
+//			String projectPath = LFWPersTool.getProjectPath();
+//				// 获取当前Pagemeta
+//				DataProviderForDesign dataProviderForDesign = new DataProviderForDesign();
+//				Map<String, Object> paramMap = new HashMap<String, Object>();
+//				paramMap.put(LFWExplorerTreeView.PROJECT_PATH_KEY, projectPath);
+//	//			String pageIdKey = getFile().getName();
+//				File file = treeItem.getFile();
+//				String filePath = file.getPath();
+//				String pageIdKey = filePath.substring(filePath.lastIndexOf(BASE_PATH) + 16);
+//				paramMap.put(LFWExplorerTreeView.PAGE_ID_KEY, pageIdKey);
+//				return  dataProviderForDesign.getPageMeta(paramMap);
+//		}
+	
+
+	public void setPm(PageMeta pm) {
+		this.pm = pm;
+	}
+
+	public LFWPageMetaTreeItem(TreeItem parentItem, File file) {
+		super(parentItem, file);
+	}
+
+	public LFWPageMetaTreeItem(TreeItem parentItem, File file, String text) {
+		super(parentItem, file, text);
+		setText(text);
+	}
+	
+	public String getPageId() {
+		String folderPath = getFile().getPath();
+		int index = folderPath.lastIndexOf("\\");
+		return folderPath.substring(index + 1);
+	}
+	
+	public String getPageId(TreeItem dir){
+		if(dir instanceof LFWDirtoryTreeItem){
+			LFWDirtoryTreeItem dird = (LFWDirtoryTreeItem) dir;
+			String folderPath = dird.getFile().getPath();
+			int index = folderPath.lastIndexOf("\\");
+			return folderPath.substring(index + 1);
+		}
+		else
+			return "";
+	}
+	
+	public String getFullPageId(){
+		String pageId = getPageId();
+		TreeItem parentTreeItem = this.getParentItem();
+		String parentId = null;
+		while(parentTreeItem != null){
+			if(parentTreeItem instanceof LFWPageMetaTreeItem){
+				parentId = getPageId(parentTreeItem);
+				pageId = parentId + "\\" + pageId;
+				parentTreeItem = parentTreeItem.getParentItem();
+			}
+			else if(parentTreeItem instanceof LFWVirtualDirTreeItem){
+				LFWVirtualDirTreeItem ptreeItem = (LFWVirtualDirTreeItem) parentTreeItem;
+				String folderPath = ptreeItem.getFile().getPath();
+				int index = folderPath.lastIndexOf("\\");
+				parentId =  folderPath.substring(index + 1);
+				pageId = parentId + "\\"  + pageId;
+				parentTreeItem = parentTreeItem.getParentItem();
+			}
+			else
+				break;
+		}
+		return pageId;
+	}
+	
+	public String getParentPageId() {
+		if(this.getParentItem() != null && this.getParentItem() instanceof LFWPageMetaTreeItem){
+			LFWPageMetaTreeItem ptreeItem = (LFWPageMetaTreeItem) this.getParentItem();
+			return ptreeItem.getPageId();
+		}
+		return null;
+	}
+	
+	public PageMeta getParentPm() {
+		if(this.getParentItem() != null && this.getParentItem() instanceof LFWPageMetaTreeItem){
+			LFWPageMetaTreeItem ptreeItem = (LFWPageMetaTreeItem) this.getParentItem();
+			return ptreeItem.getPm();
+		}
+		return null;
+	}
+	
+	public void deleteNode() {
+//		PageMeta pagemeta = LFWPersTool.getCurrentPageMeta();
+//		if(pagemeta.getExtendAttribute(ExtAttrConstants.FUNC_CODE) != null &&
+//				pm.getExtendAttribute(ExtAttrConstants.FUNC_CODE).getValue() != null){
+//			String funnode = (String) pm.getExtendAttribute(ExtAttrConstants.FUNC_CODE).getValue();
+//			NCConnector.deleteFunNode(funnode);
+//		}
+		super.deleteNode();
+	}
+	
+	public void mouseDoubleClick(){
+		if(LFWTool.NEW_VERSION.equals(getLfwVersion())){
+			EditNodeAction editNodeAction = new EditNodeAction();
+			editNodeAction.run();
+			if(getItemCount() == 0){
+				RefreshWindowNodeAction refreshNodeAction = new RefreshWindowNodeAction();
+				refreshNodeAction.run();
+			}
+		}else{
+			LFWExplorerTreeView view = LFWExplorerTreeView.getLFWExploerTreeView(null);
+			if(view.hasOpened(this)){
+				return;
+			}
+			view.refreshDirtoryTreeItem();
+		}
+	} 
+
+}

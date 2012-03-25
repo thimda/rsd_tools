@@ -1,0 +1,497 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository class='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'?>
+<repository name='file:/D:/views/views61/NC_UAP_WEB6.1_dev/NC6_UAP_VOB/NC_UAP_WEB/lfwtools/LFWSITE/ - metadata' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.compressed' value='false'/>
+    <property name='p2.timestamp' value='1332642100381'/>
+  </properties>
+  <units size='11'>
+    <unit id='nc.uap.lfw.tools.common' version='6.1.0'>
+      <update id='nc.uap.lfw.tools.common' range='[0.0.0,6.1.0)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Common Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='UFIDA Software CO.LTD'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='nc.uap.lfw.tools.common' version='6.1.0'/>
+        <provided namespace='osgi.bundle' name='nc.uap.lfw.tools.common' version='6.1.0'/>
+        <provided namespace='java.package' name='nc.uap.lfw.common' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='9'>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.filesystem' range='1.2.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='3.4.2'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.variables' range='3.2.100'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.launching' range='3.4.1'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='nc.uap.lfw.tools.common' version='6.1.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Require-Bundle: org.eclipse.jdt,org.eclipse.core.resources,org.eclipse.core.runtime,org.eclipse.jface.text,org.eclipse.jdt.core,org.eclipse.core.filesystem;bundle-version=&quot;1.2.0&quot;,org.eclipse.ui;bundle-version=&quot;3.4.2&quot;,org.eclipse.core.variables;bundle-version=&quot;3.2.100&quot;,org.eclipse.jdt.launching;bundle-version=&quot;3.4.1&quot;&#xA;Bundle-Activator: nc.uap.lfw.plugin.common.CommonPlugin&#xA;Manifest-Version: 1.0&#xA;Bundle-Version: 6.1&#xA;Export-Package: nc.uap.lfw.common&#xA;Bundle-SymbolicName: nc.uap.lfw.tools.common;singleton:=true&#xA;Bundle-ActivationPolicy: lazy&#xA;Bundle-Name: Common Plug-in&#xA;Bundle-Vendor: UFIDA Software CO.LTD&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='nc.uap.lfw.tools.xmli18n' version='6.1.0'>
+      <update id='nc.uap.lfw.tools.xmli18n' range='[0.0.0,6.1.0)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xml i18nName tool'/>
+        <property name='org.eclipse.equinox.p2.provider' value='UFIDA Software CO.LTD'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='nc.uap.lfw.tools.xmli18n' version='6.1.0'/>
+        <provided namespace='osgi.bundle' name='nc.uap.lfw.tools.xmli18n' version='6.1.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='12'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='3.4.2'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='3.4.4'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='3.4.2'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.4.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='3.4.2'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ltk.ui.refactoring' range='3.4.1'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.ui' range='3.4.2'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.launching' range='3.4.1'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ltk.core.refactoring' range='3.4.2'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='3.4.0'/>
+        <required namespace='osgi.bundle' name='nc.uap.lfw.tools.common' range='1.0.8'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='nc.uap.lfw.tools.xmli18n' version='6.1.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-Vendor: UFIDA Software CO.LTD&#xA;Bundle-ManifestVersion: 2&#xA;Bundle-Activator: nc.uap.lfw.plugin.Activator&#xA;Bundle-RequiredExecutionEnvironment: JavaSE-1.6&#xA;Bundle-ClassPath: lib/dom4j-1_6_1.jar,.,lib/jaxen-1.1-beta-6.jar&#xA;Require-Bundle: org.eclipse.ui,org.eclipse.jface.text;bundle-version=&quot;3.4.2&quot;,org.eclipse.jdt.core;bundle-version=&quot;3.4.4&quot;,org.eclipse.core.resources;bundle-version=&quot;3.4.2&quot;,org.eclipse.core.runtime;bundle-version=&quot;3.4.0&quot;,org.eclipse.ui.ide;bundle-version=&quot;3.4.2&quot;,org.eclipse.ltk.ui.refactoring;bundle-version=&quot;3.4.1&quot;,org.eclipse.jdt.ui;bundle-version=&quot;3.4.2&quot;,org.eclipse.jdt.launching;bundle-version=&quot;3.4.1&quot;,org.eclipse.ltk.core.refactoring;bundle-version=&quot;3.4.2&quot;,org.eclipse.ui.editors;bundle-version=&quot;3.4.0&quot;,nc.uap.lfw.tools.common;bundle-version=&quot;1.0.8&quot;&#xA;Bundle-Name: Xml i18nName tool&#xA;Bundle-ActivationPolicy: lazy&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: nc.uap.lfw.tools.xmli18n;singleton:=true&#xA;Bundle-Version: 6.1&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='tooling.source.default' version='1.0.0' singleton='false'>
+      <hostRequirements size='1'>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='source' range='0.0.0' optional='true' multiple='true' greedy='false'/>
+      </hostRequirements>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='tooling.source.default' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.flavor' name='tooling' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='source' range='0.0.0' optional='true' multiple='true' greedy='false'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='install'>
+            addSourceBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='uninstall'>
+            removeSourceBundle(bundle:${artifact})
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='LFWFEATURE.feature.group' version='6.1.0' singleton='false'>
+      <update id='LFWFEATURE.feature.group' range='[0.0.0,6.1.0)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='LFWFEATURE Feature'/>
+        <property name='org.eclipse.equinox.p2.description' value='[Enter Feature Description here.]'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://www.example.com/description'/>
+        <property name='org.eclipse.equinox.p2.provider' value='UFIDA'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='LFWFEATURE.feature.group' version='6.1.0'/>
+      </provides>
+      <requires size='5'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='nc.uap.lfw.tools.common' range='[6.1.0,6.1.0]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='nc.uap.lfw.tools.perspective' range='[6.1.0,6.1.0]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='nc.uap.lfw.tools.project' range='[6.1.0,6.1.0]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='nc.uap.lfw.tools.xmli18n' range='[6.1.0,6.1.0]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='LFWFEATURE.feature.jar' range='[6.1.0,6.1.0]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license url='http://www.example.com/license'>
+          [Enter License Description here.]
+        </license>
+      </licenses>
+      <copyright url='http://www.example.com/copyright'>
+        [Enter Copyright Description here.]
+      </copyright>
+    </unit>
+    <unit id='tooling.osgi.bundle.default' version='1.0.0' singleton='false'>
+      <hostRequirements size='1'>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='0.0.0' multiple='true' greedy='false'/>
+      </hostRequirements>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='tooling.osgi.bundle.default' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.flavor' name='tooling' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='0.0.0' multiple='true' greedy='false'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='4'>
+          <instruction key='install'>
+            installBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='uninstall'>
+            uninstallBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='unconfigure'>
+
+          </instruction>
+          <instruction key='configure'>
+            setStartLevel(startLevel:4);
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='tooling.org.eclipse.update.feature.default' version='1.0.0' singleton='false'>
+      <hostRequirements size='1'>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' range='0.0.0' optional='true' multiple='true' greedy='false'/>
+      </hostRequirements>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='tooling.org.eclipse.update.feature.default' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.flavor' name='tooling' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' range='0.0.0' optional='true' multiple='true' greedy='false'/>
+      </requires>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <touchpoint id='null' version='0.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='install'>
+            installFeature(feature:${artifact},featureId:default,featureVersion:default)
+          </instruction>
+          <instruction key='uninstall'>
+            uninstallFeature(feature:${artifact},featureId:default,featureVersion:default)
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='nc.uap.lfw.tools.perspective' version='6.1.0'>
+      <update id='nc.uap.lfw.tools.perspective' range='[0.0.0,6.1.0)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Lfw app development plug in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='UFIDA Software CO.LTD'/>
+      </properties>
+      <provides size='19'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='nc.uap.lfw.tools.perspective' version='6.1.0'/>
+        <provided namespace='osgi.bundle' name='nc.uap.lfw.tools.perspective' version='6.1.0'/>
+        <provided namespace='java.package' name='nc.lfw.editor.common' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.lfw.editor.common.extend' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.lfw.editor.common.tools' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.lfw.editor.pagemeta' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.lfw.jsp.editor' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.lfw.jsp.swt' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.lfw.lfwtools.perspective' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.uap.lfw.core' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.uap.lfw.editor.common.tools' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.uap.lfw.palette' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.uap.lfw.perspective' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.uap.lfw.perspective.editor' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.uap.lfw.perspective.listener' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.uap.lfw.perspective.project' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.uap.lfw.perspective.views' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.uap.lfw.perspective.webcomponent' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='24'>
+        <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.workbench.texteditor' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.views' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.debug.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.debug.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.debug' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.launching' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.variables' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.filesystem' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.navigator' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.junit' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.gef' range='3.4.1'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='3.4.0'/>
+        <required namespace='osgi.bundle' name='nc.uap.lfw.tools.common' range='1.0.8'/>
+        <required namespace='java.package' name='ncmdp.editor' range='0.0.0'/>
+        <required namespace='java.package' name='ncmdp.project' range='0.0.0'/>
+        <required namespace='java.package' name='ncmdp.tool' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='nc.uap.lfw.tools.perspective' version='6.1.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-Name: Lfw app development plug in&#xA;Bundle-Activator: nc.lfw.lfwtools.perspective.MainPlugin&#xA;Manifest-Version: 1.0&#xA;Bundle-Vendor: UFIDA Software CO.LTD&#xA;Bundle-ClassPath: lib/nccore.jar,lib/amccore.jar,.,lib/basic.jar&#xA;Bundle-ActivationPolicy: lazy&#xA;Bundle-SymbolicName: nc.uap.lfw.tools.perspective;singleton:=true&#xA;Import-Package: ncmdp.editor,ncmdp.project,ncmdp.tool&#xA;Bundle-ManifestVersion: 2&#xA;Bundle-Version: 6.1&#xA;Bundle-Localization: plugin&#xA;Export-Package: nc.lfw.editor.common,nc.lfw.editor.common.extend,nc.lfw.editor.common.tools,nc.lfw.editor.pagemeta,nc.lfw.jsp.editor,nc.lfw.jsp.swt,nc.lfw.lfwtools.perspective,nc.uap.lfw.core,nc.uap.lfw.editor.common.tools,nc.uap.lfw.palette,nc.uap.lfw.perspective,nc.uap.lfw.perspective.editor,nc.uap.lfw.perspective.listener,nc.uap.lfw.perspective.project,nc.uap.lfw.perspective.views,nc.uap.lfw.perspective.webcomponent&#xA;Require-Bundle: org.eclipse.jface.text,org.eclipse.ui,org.eclipse.ui.workbench.texteditor,org.eclipse.ui.views,org.eclipse.core.resources,org.eclipse.ui.ide,org.eclipse.core.runtime,org.eclipse.debug.core,org.eclipse.jdt.core,org.eclipse.jdt.ui,org.eclipse.debug.ui,org.eclipse.jdt.debug,org.eclipse.jdt.launching,org.eclipse.core.variables,org.eclipse.core.filesystem,org.eclipse.ui.console,org.eclipse.ui.navigator,org.eclipse.jdt.junit,org.eclipse.gef;bundle-version=&quot;3.4.1&quot;,org.eclipse.ui.editors;bundle-version=&quot;3.4.0&quot;,nc.uap.lfw.tools.common;bundle-version=&quot;1.0.8&quot;&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='LFWFEATURE.feature.jar' version='6.1.0'>
+      <update id='LFWFEATURE.feature.jar' range='[0.0.0,6.1.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='LFWFEATURE Feature'/>
+        <property name='org.eclipse.equinox.p2.description' value='[Enter Feature Description here.]'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://www.example.com/description'/>
+        <property name='org.eclipse.equinox.p2.provider' value='UFIDA'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='LFWFEATURE.feature.jar' version='6.1.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='LFWFEATURE' version='6.1.0'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='LFWFEATURE' version='6.1.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license url='http://www.example.com/license'>
+          [Enter License Description here.]
+        </license>
+      </licenses>
+      <copyright url='http://www.example.com/copyright'>
+        [Enter Copyright Description here.]
+      </copyright>
+    </unit>
+    <unit id='config.a.jre' version='1.6.0' singleton='false'>
+      <hostRequirements size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='a.jre' range='1.6.0'/>
+      </hostRequirements>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='config.a.jre' version='1.6.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='a.jre' range='1.6.0'/>
+      </requires>
+      <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='install'>
+
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='a.jre' version='1.6.0' singleton='false'>
+      <provides size='117'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='a.jre' version='1.6.0'/>
+        <provided namespace='java.package' name='javax.accessibility' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.activity' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto.interfaces' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto.spec' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.metadata' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.plugins.bmp' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.plugins.jpeg' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.loading' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.modelmbean' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.monitor' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.openmbean' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.relation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.remote' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.remote.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.timer' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.directory' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.ldap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.net' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.net.ssl' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.attribute' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.attribute.standard' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.rmi.CORBA' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.rmi.ssl' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.callback' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.kerberos' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.login' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.x500' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.cert' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.sasl' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.midi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.midi.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.sampled' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.sampled.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset.serial' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.border' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.colorchooser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.filechooser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.basic' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.metal' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.multi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.synth' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.table' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.html' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.html.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.rtf' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.tree' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.undo' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.transaction' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.transaction.xa' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.datatype' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.namespace' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.parsers' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.sax' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.validation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.xpath' version='0.0.0'/>
+        <provided namespace='java.package' name='org.ietf.jgss' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA_2_3' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA_2_3.portable' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA.DynAnyPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA.ORBPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA.portable' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA.TypeCodePackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CosNaming' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CosNaming.NamingContextExtPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CosNaming.NamingContextPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.Dynamic' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.DynamicAny' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.DynamicAny.DynAnyFactoryPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.DynamicAny.DynAnyPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.IOP' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.IOP.CodecFactoryPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.IOP.CodecPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.Messaging' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableInterceptor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableInterceptor.ORBInitInfoPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer.CurrentPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer.POAManagerPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer.POAPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer.portable' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer.ServantLocatorPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.SendingContext' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.stub.java.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.bootstrap' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.events' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.ls' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax.ext' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax.helpers' version='0.0.0'/>
+      </provides>
+      <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
+    </unit>
+    <unit id='nc.uap.lfw.tools.project' version='6.1.0'>
+      <update id='nc.uap.lfw.tools.project' range='[0.0.0,6.1.0)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Lfw project guide plug in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='UFIDA Software CO.LTD'/>
+      </properties>
+      <provides size='12'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='nc.uap.lfw.tools.project' version='6.1.0'/>
+        <provided namespace='osgi.bundle' name='nc.uap.lfw.tools.project' version='6.1.0'/>
+        <provided namespace='java.package' name='nc.uap.lfw.core' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.uap.lfw.internal.core' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.uap.lfw.internal.project' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.uap.lfw.internal.util' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.uap.lfw.launcher' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.uap.lfw.model' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.uap.lfw.project' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.uap.lfw.ui.action' version='0.0.0'/>
+        <provided namespace='java.package' name='nc.uap.lfw.wizards' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='16'>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.launching' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.debug.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.debug.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.debug.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.variables' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.filesystem' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.search' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.navigator' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.4.0'/>
+        <required namespace='osgi.bundle' name='nc.uap.lfw.tools.common' range='1.0.8'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='nc.uap.lfw.tools.project' version='6.1.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-Name: Lfw project guide plug in&#xA;Bundle-Activator: nc.uap.lfw.core.WEBProjPlugin&#xA;Manifest-Version: 1.0&#xA;Bundle-Vendor: UFIDA Software CO.LTD&#xA;Bundle-ClassPath: .&#xA;Bundle-ActivationPolicy: lazy&#xA;Bundle-SymbolicName: nc.uap.lfw.tools.project;singleton:=true&#xA;Bundle-ManifestVersion: 2&#xA;Eclipse-LazyStart: true&#xA;Bundle-Version: 6.1&#xA;Bundle-Localization: plugin&#xA;Export-Package: nc.uap.lfw.core,nc.uap.lfw.internal.core,nc.uap.lfw.internal.project,nc.uap.lfw.internal.util,nc.uap.lfw.launcher,nc.uap.lfw.model,nc.uap.lfw.project,nc.uap.lfw.ui.action,nc.uap.lfw.wizards&#xA;Require-Bundle: org.eclipse.core.resources,org.eclipse.jdt.core,org.eclipse.jdt.launching,org.eclipse.jdt.debug.ui,org.eclipse.debug.core,org.eclipse.ui.ide,org.eclipse.debug.ui,org.eclipse.jdt.ui,org.eclipse.core.variables,org.eclipse.core.filesystem,org.eclipse.ui.console,org.eclipse.search,org.eclipse.ui.navigator,org.eclipse.ui,org.eclipse.core.runtime;bundle-version=&quot;3.4.0&quot;,nc.uap.lfw.tools.common;bundle-version=&quot;1.0.8&quot;&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+  </units>
+</repository>

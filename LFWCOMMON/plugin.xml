@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+	<extension
+           point="org.eclipse.ui.preferencePages">
+        <!--LFW JS Editor-->
+        <page
+              class="nc.uap.lfw.plugin.perspective.preferences.DefaultPreferencePage"
+              id="lfwtools.preferences.defaultPage"
+              name="LFW 工具配置页"/>
+     </extension>
+</plugin>
